@@ -22,7 +22,7 @@ const base = import.meta.env.BASE_URL;
     <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
     <title>{title}</title>
   </head>
-  <body class="grid-bg min-h-screen">
+  <body class="grid-bg min-h-screen" style={`--page-bg: url(${base}bg.jpg)`}>
     <a
       href="#main"
       class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded focus:bg-noir-surface focus:px-4 focus:py-2 focus:text-cyan-accent focus:outline focus:outline-2 focus:outline-cyan-accent"

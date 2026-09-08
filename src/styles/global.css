@@ -25,9 +25,14 @@
   .grid-bg {
     background-color: #0a0e14;
     background-image:
-      linear-gradient(rgba(0, 229, 255, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0, 229, 255, 0.03) 1px, transparent 1px);
-    background-size: 40px 40px;
+      linear-gradient(rgba(10, 14, 20, 0.82), rgba(10, 14, 20, 0.9)),
+      linear-gradient(rgba(0, 229, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 229, 255, 0.04) 1px, transparent 1px),
+      var(--page-bg);
+    background-size: auto, 40px 40px, 40px 40px, cover;
+    background-position: center, 0 0, 0 0, center;
+    background-repeat: no-repeat, repeat, repeat, no-repeat;
+    background-attachment: fixed, scroll, scroll, fixed;
   }
 
   .section-heading {
