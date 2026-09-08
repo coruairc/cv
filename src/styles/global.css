@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-noir-bg text-slate-200 font-sans antialiased;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-cyan-accent;
+  }
+
+  ::selection {
+    background: rgba(0, 229, 255, 0.25);
+    color: #e2e8f0;
+  }
+}
+
+@layer components {
+  .grid-bg {
+    background-color: #0a0e14;
+    background-image:
+      linear-gradient(rgba(0, 229, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 229, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .section-heading {
+    @apply font-mono text-sm uppercase tracking-[0.2em] text-cyan-accent mb-6;
+  }
+
+  .chip {
+    @apply inline-flex items-center rounded border border-noir-border bg-noir-surface px-3 py-1 text-sm text-slate-200 transition-colors hover:border-cyan-accent/50 hover:text-cyan-accent;
+  }
+
+  .nav-link {
+    @apply font-mono text-xs uppercase tracking-wider text-noir-muted transition-colors hover:text-cyan-accent;
+  }
+
+  .nav-link[aria-current='true'],
+  .nav-link:focus-visible {
+    @apply text-cyan-accent;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded border border-cyan-accent/60 bg-cyan-accent/10 px-5 py-2.5 font-mono text-sm text-cyan-accent shadow-glow transition hover:bg-cyan-accent/20 hover:border-cyan-accent;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 rounded border border-noir-border bg-transparent px-4 py-2 font-mono text-sm text-noir-muted transition hover:border-amber-accent/50 hover:text-amber-accent;
+  }
+
+  .timeline-item {
+    @apply relative pl-8 pb-10 last:pb-0;
+  }
+
+  .timeline-item::before {
+    content: '';
+    @apply absolute left-[7px] top-3 bottom-0 w-px bg-noir-border;
+  }
+
+  .timeline-item:last-child::before {
+    @apply hidden;
+  }
+
+  .timeline-dot {
+    @apply absolute left-0 top-2 h-4 w-4 rounded-full border-2 border-cyan-accent bg-noir-bg shadow-glow;
+  }
+}
